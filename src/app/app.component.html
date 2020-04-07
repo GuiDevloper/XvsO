@@ -1,0 +1,10 @@
+
+<div class="content" role="main">
+  <p> {{ title }} </p>
+  <app-hero *ngIf="!displayGame; else game" (showGame)="displayGame = true"
+    (heroData)="heroData = $event">
+  </app-hero>
+  <ng-template #game>
+    <app-game [heroData]="heroData"></app-game>
+  </ng-template>
+</div>

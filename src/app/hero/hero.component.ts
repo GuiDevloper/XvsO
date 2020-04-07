@@ -25,9 +25,10 @@ export class HeroComponent implements OnInit {
         const res = data.data.results[0];
         if (res) {
           console.log(res);
+          const thumb = res.thumbnail.path.replace('http', 'https');
           this.heroes[i] = [
             res.name,
-            `url('` + res.thumbnail.path + '/standard_fantastic.' + res.thumbnail.extension + `')`
+            `url('` + thumb + '/standard_fantastic.' + res.thumbnail.extension + `')`
           ];
           if (i === 1) {
             this.heroData.emit(this.heroes);

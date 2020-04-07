@@ -6,3 +6,19 @@ body {
   background-color: #333;
   color: white;
 }
+
+input, button {
+  all: unset;
+  border: 2px solid #1f1f1f;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+input {
+  margin: 0 0 4%;
+  font-size: 16px;
+}
+
+button {
+  cursor: pointer;
+}

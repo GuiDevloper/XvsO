@@ -1,0 +1,33 @@
+<div class="grid">
+  <ng-container *ngFor="let i of [0, 1, 2]">
+
+    <button class="grid__btn"
+      *ngFor="let j of [0, 1, 2]"
+      (click)="setBtn(i, j)"
+      [ngStyle]="backgroundBtn(i, j)"
+    >
+      {{velha[i][j]}}
+    </button>
+
+  </ng-container>
+</div>
+
+<ng-container *ngIf="ganhou; else continue">
+  <button (click)="restart()">
+    Recomeçar
+  </button>
+  <p class="endgame">
+    {{jogadas === 9 ? 'Deu velha, amigo' :
+        heroData[curHero][0] + ' ganhou' }}
+  </p>
+</ng-container>
+
+<ng-template #continue>
+  <p>
+    Vez de {{heroData[curHero][0]}} ({{curSym}})
+  </p>
+</ng-template>
+
+<p>Pontos</p>
+<p>{{heroData[0][0]}}: {{points[0]}}</p>
+<p>{{heroData[1][0]}}: {{points[1]}}</p>

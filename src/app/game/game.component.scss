@@ -1,0 +1,23 @@
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 130px);
+  @at-root #{&}__btn {
+    all: unset;
+    height: 130px;
+    width: 130px;
+    background-size: cover;
+    background-blend-mode: screen;
+    font-size: 40px;
+    color: yellow;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    border: 2px solid rgb(172, 35, 35);
+    border-bottom: none;
+    border-right: none;
+    transition: 250ms;
+  }
+}
+
+.endgame {
+  color: yellow;
+}

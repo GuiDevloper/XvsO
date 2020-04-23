@@ -25,7 +25,10 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/pwabuilder-sw.js",
+              "src/manifest.json",
+              "src/logo.png"
             ],
             "styles": [
               "src/styles.scss"
